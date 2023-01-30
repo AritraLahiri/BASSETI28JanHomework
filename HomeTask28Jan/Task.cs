@@ -7,7 +7,7 @@ namespace HomeTaskMain
         {
             Logic logic = new();
             logic.SetValueToArray();
-            Console.WriteLine("Enter a valid Id to check");
+            Console.WriteLine("Enter a valid Id to check ");
             logic.IsValidId(Console.ReadLine());
         }
 
