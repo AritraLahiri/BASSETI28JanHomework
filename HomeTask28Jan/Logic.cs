@@ -41,7 +41,7 @@ namespace HomeTasksLogic
 
             }
         }
-        public bool IsValidIdAndPass(string id, string pass)
+        public void IsValidIdAndPass(string id, string pass)
         {
 
             foreach (EmployeeDetails emp in empArr)
@@ -49,10 +49,11 @@ namespace HomeTasksLogic
                 if (emp.Id == id && emp.Password == pass)
                 {
                     Display(emp);
-                    return true;
+                    return;
+
                 }
             }
-            return false;
+            Console.WriteLine("Invalid Id or Password");
         }
 
 

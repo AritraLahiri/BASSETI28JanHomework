@@ -12,9 +12,8 @@ namespace HomeTaskMain
             string id = Console.ReadLine();
             Console.WriteLine("Enter a valid Password");
             string pass = Console.ReadLine();
+            logic.IsValidIdAndPass(id, pass);
 
-            if (!logic.IsValidIdAndPass(id, pass))
-                Console.WriteLine("Invalid Id or Password");
 
         }
 
