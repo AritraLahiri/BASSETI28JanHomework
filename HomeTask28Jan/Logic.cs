@@ -35,48 +35,63 @@ namespace HomeTasksLogic
         {
             for (int i = 0; i < empArr.Length; i++)
             {
-                Console.WriteLine($"Employee {i + 1}");
+                Console.WriteLine($"\n Employee {i + 1}");
                 empArr[i] = new EmployeeDetails();
                 UserInput(empArr[i]);
 
             }
         }
-        public void IsValidId(string Id)
+        public bool IsValidIdAndPass(string id, string pass)
         {
+
             foreach (EmployeeDetails emp in empArr)
             {
-                if (emp.Id == Id)
+                if (emp.Id == id && emp.Password == pass)
                 {
                     Display(emp);
-                    return;
+                    return true;
                 }
             }
-            Console.WriteLine($"Inval id is {Id}");
+            return false;
         }
-        public void IsValidName(string name)
-        {
-            foreach (EmployeeDetails emp in empArr)
-            {
-                if (emp.Name == name)
+
+
+        /*        public void IsValidId(string Id)
                 {
-                    Display(emp);
-                    return;
+                    foreach (EmployeeDetails emp in empArr)
+                    {
+                        if (emp.Id == Id)
+                        {
+                            Display(emp);
+                            return;
+                        }
+                    }
+                    Console.WriteLine($"Inval id is {Id}");
                 }
-            }
-            Console.WriteLine($"Invalid Name {name}");
-        }
-        public void IsValidPass(string pass)
-        {
-            foreach (EmployeeDetails emp in empArr)
-            {
-                if (emp.Password == pass)
+                public void IsValidName(string name)
                 {
-                    Display(emp);
-                    return;
+                    foreach (EmployeeDetails emp in empArr)
+                    {
+                        if (emp.Name == name)
+                        {
+                            Display(emp);
+                            return;
+                        }
+                    }
+                    Console.WriteLine($"Invalid Name {name}");
                 }
-            }
-            Console.WriteLine($"Invalid Password {pass}");
-        }
+                public void IsValidPass(string pass)
+                {
+                    foreach (EmployeeDetails emp in empArr)
+                    {
+                        if (emp.Password == pass)
+                        {
+                            Display(emp);
+                            return;
+                        }
+                    }
+                    Console.WriteLine($"Invalid Password {pass}");
+                }*/
 
 
 

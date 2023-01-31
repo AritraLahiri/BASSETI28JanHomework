@@ -7,8 +7,15 @@ namespace HomeTaskMain
         {
             Logic logic = new();
             logic.SetValueToArray();
-            Console.WriteLine("Enter a valid Id to check ");
-            logic.IsValidId(Console.ReadLine());
+            Console.WriteLine("\n Enter The Details To Login");
+            Console.WriteLine("Enter a valid Id");
+            string id = Console.ReadLine();
+            Console.WriteLine("Enter a valid Password");
+            string pass = Console.ReadLine();
+
+            if (!logic.IsValidIdAndPass(id, pass))
+                Console.WriteLine("Invalid Id or Password");
+
         }
 
 
